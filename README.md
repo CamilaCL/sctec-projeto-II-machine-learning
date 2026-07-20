@@ -56,6 +56,6 @@ Após testes extensivos de hiperparâmetros rastreando curvas de aprendizado con
 Embora o KNN ($k=3$) tenha apresentado um *Recall* isolado mais alto (96%), sua baixa Precisão (52%) geraria um volume insustentável de alarmes falsos (Falsos Positivos). Na prática, isso significaria desperdiçar o orçamento de marketing disparando cupons agressivos de retenção para uma enorme quantidade de clientes que continuariam fiéis de qualquer maneira, corroendo desnecessariamente a margem de lucro da empresa.
 
 A **Árvore de Decisão com `max_depth=15`** provou ser a solução ideal por três motivos centrais:
-1.  **Equilíbrio Ótimo (F1-Score de 78%):** O modelo entrega alta assertividade tanto para identificar quem vai sair quanto para não gerar ruído com alarmes falsos.
+1.  **Equilíbrio Ótimo (F1-Score de 77%):** O modelo entrega alta assertividade tanto para identificar quem vai sair quanto para não gerar ruído com alarmes falsos.
 2.  **Mitigação do Pior Erro (Falso Negativo):** Deixar de identificar um cliente em risco de *churn* custa o valor total do LTV e exige um CAC elevado para substituição. Com um *Recall* robusto de 77%, a árvore mitiga de forma eficiente essas omissões financeiramente dolorosas.
 3.  **Interpretabilidade e Ação Comercial:** Estruturas de árvore geram nós lógicos inteligíveis (*"Se o cliente tem menos de 3 meses de casa AND abriu uma reclamação..."*). Isso permite que o time de CRM implemente réguas lógicas transparentes e automatizadas diretamente no sistema, personalizando a abordagem preventiva conforme o real motivo do atrito.
